@@ -2,115 +2,162 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Ricardo Moran">
     <title>Tournament Bracket Generator</title>
 
+    <link type="text/css" rel="stylesheet" href="libs/bootstrap-4.3.1/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="libs/fontawesome-free-5.9.0-web/css/all.css">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1 contenteditable="true">Título (Click para editar...)</h1>
-    <main id="tournament">
-    	<ul class="round round-1">
-    		<li class="spacer">&nbsp;</li>
+    <div class="container-fluid">
 
-    		<li class="game game-top winner">Lousville <span>79</span></li>
-    		<li class="game game-spacer">&nbsp;</li>
-    		<li class="game game-bottom ">NC A&T <span>48</span></li>
+      <div class="row">
+        <div class="col">
+          <h1 contenteditable="true">Título (Click para editar...)</h1>
+        </div>
+      </div>
 
-    		<li class="spacer">&nbsp;</li>
+      <div class="row">
+        <div class="col">
+          <textarea name="teams-list" rows="10" cols="80">
+Equipo 1
+Equipo 2
+Equipo 3
+Equipo 4
+Equipo 5
+Equipo 6
+Equipo 7
+Equipo 8
+          </textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="button" id="go-button" class="btn btn-primary">Generar llaves</button>
+        </div>
+      </div>
 
-    		<li class="game game-top winner">Colo St <span>84</span></li>
-    		<li class="game game-spacer">&nbsp;</li>
-    		<li class="game game-bottom ">Missouri <span>72</span></li>
+      <main id="tournament-brackets">
 
-    		<li class="spacer">&nbsp;</li>
+      </main>
 
-    		<li class="game game-top ">Oklahoma St <span>55</span></li>
-    		<li class="game game-spacer">&nbsp;</li>
-    		<li class="game game-bottom winner">Oregon <span>68</span></li>
 
-    		<li class="spacer">&nbsp;</li>
+        <main style="">
+          <ul class="round round-1">
+            <li class="spacer">&nbsp;</li>
 
-    		<li class="game game-top winner">Saint Louis <span>64</span></li>
-    		<li class="game game-spacer">&nbsp;</li>
-    		<li class="game game-bottom ">New Mexico St <span>44</span></li>
+            <li class="game game-top winner">Lousville <a href="#" onclick="console.log('Richo')"><i class="fas fa-minus-circle"></i></a></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom ">NC A&T <span><i class="fas fa-minus-circle"></i></span></li>
 
-    		<li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-    		<li class="game game-top winner">Memphis <span>54</span></li>
-    		<li class="game game-spacer">&nbsp;</li>
-    		<li class="game game-bottom ">St Mary's <span>52</span></li>
+            <li class="game game-top winner">Colo St <span>84</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom ">Missouri <span>72</span></li>
 
-    		<li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-    		<li class="game game-top winner">Mich St <span>65</span></li>
-    		<li class="game game-spacer">&nbsp;</li>
-    		<li class="game game-bottom ">Valparaiso <span>54</span></li>
+            <li class="game game-top ">Oklahoma St <span>55</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom winner">Oregon <span>68</span></li>
 
-    		<li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-    		<li class="game game-top winner">Creighton <span>67</span></li>
-    		<li class="game game-spacer">&nbsp;</li>
-    		<li class="game game-bottom ">Cincinnati <span>63</span></li>
+            <li class="game game-top winner">Saint Louis <span>64</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom ">New Mexico St <span>44</span></li>
 
-    		<li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-    		<li class="game game-top winner">Duke <span>73</span></li>
-    		<li class="game game-spacer">&nbsp;</li>
-    		<li class="game game-bottom ">Albany <span>61</span></li>
+            <li class="game game-top winner">Memphis <span>54</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom ">St Mary's <span>52</span></li>
 
-    		<li class="spacer">&nbsp;</li>
-    	</ul>
-    	<ul class="round round-2">
-    		<li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-    		<li class="game game-top winner">Lousville <span>82</span></li>
-    		<li class="game game-spacer">&nbsp;</li>
-    		<li class="game game-bottom ">Colo St <span>56</span></li>
+            <li class="game game-top winner">Mich St <span>65</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom ">Valparaiso <span>54</span></li>
 
-    		<li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-    		<li class="game game-top winner">Oregon <span>74</span></li>
-    		<li class="game game-spacer">&nbsp;</li>
-    		<li class="game game-bottom ">Saint Louis <span>57</span></li>
+            <li class="game game-top winner">Creighton <span>67</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom ">Cincinnati <span>63</span></li>
 
-    		<li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-    		<li class="game game-top ">Memphis <span>48</span></li>
-    		<li class="game game-spacer">&nbsp;</li>
-    		<li class="game game-bottom winner">Mich St <span>70</span></li>
+            <li class="game game-top winner">Duke <span>73</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom ">Albany <span>61</span></li>
 
-    		<li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
+          </ul>
+          <ul class="round round-2">
+            <li class="spacer">&nbsp;</li>
 
-    		<li class="game game-top ">Creighton <span>50</span></li>
-    		<li class="game game-spacer">&nbsp;</li>
-    		<li class="game game-bottom winner">Duke <span>66</span></li>
+            <li class="game game-top winner">Lousville <span>82</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom ">Colo St <span>56</span></li>
 
-    		<li class="spacer">&nbsp;</li>
-    	</ul>
-    	<ul class="round round-3">
-    		<li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-    		<li class="game game-top winner">Lousville <span>77</span></li>
-    		<li class="game game-spacer">&nbsp;</li>
-    		<li class="game game-bottom ">Oregon <span>69</span></li>
+            <li class="game game-top winner">Oregon <span>74</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom ">Saint Louis <span>57</span></li>
 
-    		<li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-    		<li class="game game-top ">Mich St <span>61</span></li>
-    		<li class="game game-spacer">&nbsp;</li>
-    		<li class="game game-bottom winner">Duke <span>71</span></li>
+            <li class="game game-top ">Memphis <span>48</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom winner">Mich St <span>70</span></li>
 
-    		<li class="spacer">&nbsp;</li>
-    	</ul>
-    	<ul class="round round-4">
-    		<li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-    		<li class="game game-top winner">Lousville <span>85</span></li>
-    		<li class="game game-spacer">&nbsp;</li>
-    		<li class="game game-bottom ">Duke <span>63</span></li>
+            <li class="game game-top ">Creighton <span>50</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom winner">Duke <span>66</span></li>
 
-    		<li class="spacer">&nbsp;</li>
-    	</ul>
-    </main>
+            <li class="spacer">&nbsp;</li>
+          </ul>
+          <ul class="round round-3">
+            <li class="spacer">&nbsp;</li>
+
+            <li class="game game-top winner">Lousville <span>77</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom ">Oregon <span>69</span></li>
+
+            <li class="spacer">&nbsp;</li>
+
+            <li class="game game-top ">Mich St <span>61</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom winner">Duke <span>71</span></li>
+
+            <li class="spacer">&nbsp;</li>
+          </ul>
+          <ul class="round round-4">
+            <li class="spacer">&nbsp;</li>
+
+            <li class="game game-top winner">Lousville <span>85</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom ">Duke <span>63</span></li>
+
+            <li class="spacer">&nbsp;</li>
+          </ul>
+        </main>
+    </div>
+
+
+    <!-- JQuery/Bootstrap -->
+    <script src="libs/jquery/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="libs/bootstrap-4.3.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+    <script src="index.js" type="text/javascript"></script>
   </body>
 </html>
