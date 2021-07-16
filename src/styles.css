@@ -29,6 +29,7 @@ main{
 
 li.game{
   padding-left:20px;
+  cursor: pointer;
 }
 
   li.game.winner{
@@ -38,10 +39,6 @@ li.game{
     float:right;
     margin-right:5px;
     color:red;
-  }
-  li.game span{
-    float:right;
-    margin-right:5px;
   }
 
   li.game-top{ border-bottom:1px solid #aaa; }
